@@ -5,6 +5,12 @@ A backport of the official Cobblemon move animations for 1.20.1. This resource/d
 I also reused, recolored, and redone a lot of moves not yet done, even in Cobblemon 1.7 !
 New custom sounds, new moves, and more fun !
 
+Since this is a backport to a version before the great NeoForge rewrite, there is some changes to take into account :
+
+  - Cobblemon 1.5 lacks multiple locators (model indicators), so some attacks had to be reworked to look fitting.
+  - The locators for particles traveling to target doesn't exist in 1.5, only aim towards target is here (ex: "Present" fires 6 meters towards target and is fixed, but "Ice Beam" is still aiming to target).
+  - There is only 3 usable locators per models : feet, body, and special-attack (varying a lot per model, ex: Charizard's mouth).
+
 **License & Credits :**
 
 **Code :**
