@@ -1,0 +1,49 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "minimize",
+                                           "status"
+                                       ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.3
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.minimize.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "expressions":  [
+                                             "q.play_animation(q.bedrock_stateful(\u0027minimize\u0027, \u0027actor\u0027))"
+                                         ],
+                         "delay":  1.0
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.8
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.5
+                     }
+                 ]
+}

@@ -1,0 +1,69 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == true \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:anger",
+                         "locator":  "root"
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "frustration2",
+                                           "frustration",
+                                           "blunt",
+                                           "normal",
+                                           "physical"
+                                       ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:anger_steaming",
+                         "delay":  0.2,
+                         "locator":  "root",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:anger_steaming",
+                         "delay":  1,
+                         "locator":  "root",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:frustration_target_1",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.frustration.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:frustration_target_2",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     }
+                 ]
+}

@@ -1,0 +1,63 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "spore",
+                                           "powder",
+                                           "status",
+                                           "cry"
+                                       ],
+                         "delay":  1.25
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:spore",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.spore.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:spore_cloud",
+                         "delay":  0.1,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.55
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:spore_land",
+                         "delay":  1,
+                         "locator":  "root"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.95
+                     }
+                 ]
+}

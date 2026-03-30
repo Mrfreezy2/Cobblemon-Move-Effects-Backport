@@ -1,0 +1,59 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "scaryface",
+                                           "status"
+                                       ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.35
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:leer_gleam",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.leer.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.play_animation(q.bedrock_stateful(\u0027growl\u0027, \u0027target\u0027))"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.75
+                     }
+                 ]
+}

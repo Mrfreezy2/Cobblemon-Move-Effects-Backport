@@ -1,0 +1,37 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "physical"
+                                       ],
+                         "delay":  1.2
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false",
+                         "expressions":  [
+                                             "q.sound(\u0027impact_normal\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "expressions":  [
+                                             "q.particle(\u0027cobblemon:impact_normal\u0027, \u0027target\u0027)"
+                                         ],
+                         "entityCondition":  "q.entity.is_user == false"
+                     }
+                 ]
+}

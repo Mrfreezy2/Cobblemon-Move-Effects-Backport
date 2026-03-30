@@ -1,0 +1,51 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "watersport",
+                                           "water",
+                                           "status"
+                                       ],
+                         "delay":  1.2
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:watersport_actor",
+                         "locator":  "root"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.watersport.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.45
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:watersport_targetrain",
+                         "delay":  1.75,
+                         "locator":  "root"
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.95
+                     }
+                 ]
+}

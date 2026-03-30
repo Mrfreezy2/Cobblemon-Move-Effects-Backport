@@ -1,0 +1,60 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "absorb",
+                                           "grass",
+                                           "special"
+                                       ],
+                         "delay":  1.2
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:absorb_actorhit",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.absorb.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:absorb_actor",
+                         "locator":  "target",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:absorb_actorhealtimer",
+                         "locator":  "middle"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.absorb.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.75
+                     }
+                 ]
+}

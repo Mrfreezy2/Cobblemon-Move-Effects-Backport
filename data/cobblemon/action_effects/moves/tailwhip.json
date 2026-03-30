@@ -1,0 +1,45 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "tailwhip",
+                                           "status"
+                                       ],
+                         "delay":  0.8
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.tailwhip.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "expressions":  [
+                                             "q.play_animation(q.bedrock_stateful(\u0027tailwhip\u0027, \u0027actor\u0027))"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  2.1
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.8
+                     }
+                 ]
+}

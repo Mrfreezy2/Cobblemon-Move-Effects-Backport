@@ -1,0 +1,64 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "powder",
+                                           "status"
+                                       ],
+                         "delay":  1.25
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:powder",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.powder.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:powder_cloud",
+                         "locator":  "target",
+                         "delay":  0.1
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.powder.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.55
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:powder_land",
+                         "locator":  "root",
+                         "delay":  1,
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false"
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  2
+                     }
+                 ]
+}

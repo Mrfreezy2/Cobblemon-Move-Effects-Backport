@@ -1,0 +1,50 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "q.move.name",
+                                           "q.move.damage_category"
+                                       ],
+                         "delay":  1.2
+                     },
+                     {
+                         "type":  "entity_sound",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "sound":  "\u0027cobblemon:impact.\u0027 + q.move.type"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "\u0027cobblemon:impact_\u0027 + q.move.type",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "expressions":  [
+                                             "q.particle(\u0027cobblemon:hit\u0027, \u0027target\u0027)"
+                                         ],
+                         "entityCondition":  "q.entity.is_user == false"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  2
+                     }
+                 ]
+}

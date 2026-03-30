@@ -1,0 +1,64 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "iceshard",
+                                           "ice",
+                                           "special"
+                                       ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:iceshard_actor",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.iceshard.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.9
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:iceshard_target",
+                         "locator":  "target",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:iceshard_targetmist",
+                         "locator":  "target",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.iceshard.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.8
+                     }
+                 ]
+}

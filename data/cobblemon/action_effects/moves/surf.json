@@ -1,0 +1,63 @@
+﻿{
+    "timeline": [
+        { "type": "add_holds", "holds": ["effects"] },
+        { "type": "animation", "animation": ["bodyslam", "water", "physical"], "delay": 0.6 },
+        { "type": "entity_molang", "expressions": ["q.play_animation(q.bedrock_stateful('bodyslam_water', 'actor'))"] },
+        { "type": "entity_particles", "effect": "cobblemon:watergun_spray", "locator": "root" },
+        { "type": "entity_particles", "effect": "cobblemon:surf_wave", "locator": "root" },
+        {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == true",
+            "effect": "cobblemon:waterpulse_target",
+            "locator": "root"
+        },
+        { "type": "pause", "pause": 0.4 },
+        { "type": "entity_particles", "effect": "cobblemon:surf_wave", "locator": "root" },
+        { "type": "pause", "pause": 0.4 },
+        { "type": "entity_particles", "effect": "cobblemon:surf_wave", "locator": "root" },
+        { "type": "pause", "pause": 0.37 },
+        {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == true",
+            "effect": "cobblemon:waterpulse_targetsplash",
+            "locator": "root"
+        },
+        {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == true",
+            "effect": "cobblemon:watergun_targetfoam",
+            "locator": "root"
+        },
+        {
+            "type": "entity_molang",
+            "entityCondition": "q.entity.is_user == true",
+            "expressions": ["q.sound('move.waterpulse.actor');"]
+        },
+        { "type": "pause", "pause": 0.25 },
+        {
+            "type": "entity_molang",
+            "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+            "expressions": ["q.sound('move.waterpulse.target');"]
+        },
+        {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+            "effect": "cobblemon:waterpulse_target",
+            "locator": "target"
+        },
+        {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+            "effect": "cobblemon:waterpulse_targetsplash",
+            "locator": "target"
+        },
+        {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+            "effect": "cobblemon:watergun_targetfoam",
+            "locator": "target"
+        },
+        { "type": "remove_holds", "holds": ["effects"] },
+        { "type": "pause", "pause": 1.9 }
+    ]
+}

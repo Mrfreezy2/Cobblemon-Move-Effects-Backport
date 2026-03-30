@@ -1,0 +1,83 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "stringshot",
+                                           "bug",
+                                           "special"
+                                       ],
+                         "delay":  1.25
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:stringshot_actorspray",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.stringshot.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:stringshot_actor",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.3
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:stringshot_target1",
+                         "delay":  0.05,
+                         "locator":  "middle"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.stringshot.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:stringshot_target2",
+                         "locator":  "middle"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.play_animation(q.bedrock_stateful(\u0027stringshot\u0027, \u0027target\u0027))"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.6
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.6
+                     }
+                 ]
+}

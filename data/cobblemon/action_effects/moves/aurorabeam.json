@@ -1,0 +1,97 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "aurorabeam",
+                                           "beam",
+                                           "special"
+                                       ],
+                         "delay":  0.8
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:aurorabeam_charge",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.53
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.aurorabeam.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:aurorabeam_actor",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:aurorabeam_actorfrost",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:aurorabeam_actoremit",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:aurorabeam_actorspray",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:aurorabeam_target",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.aurorabeam.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.5
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:aurorabeam_targetburst",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.7
+                     }
+                 ]
+}

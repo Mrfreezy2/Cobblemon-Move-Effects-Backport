@@ -1,0 +1,80 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:amnesia_actortrailsmall",
+                         "locator":  "special_attack"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:amnesia_actortraillarge",
+                         "locator":  "special_attack"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:amnesia_actorcloud",
+                         "locator":  "special_attack"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.nastyplot.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.8
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:amnesia_actorquestion",
+                         "locator":  "special_attack"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.amnesia.actorquestion\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.25
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "expressions":  [
+                                             "q.play_animation(q.bedrock_stateful(\u0027amnesia\u0027, \u0027actor\u0027))"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.55
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.5
+                     }
+                 ]
+}

@@ -1,0 +1,23 @@
+﻿{
+    "timeline": [
+        {"type":"add_holds","holds":["effects"]},
+        {"type":"animation","animation":["focusblast","nastyplot","special"],"delay":0.01},
+        {"type":"entity_particles","effect":"cobblemon:focusblast_actorcharge","locator":"target"},
+        {"type":"pause","pause":0.58},
+        {"type":"entity_molang","entityCondition":"q.entity.is_user == true","expressions":["q.sound('move.focusblast.actor');"]},
+        {"type":"pause","pause":0.12},
+        {"type":"entity_particles","effect":"cobblemon:focusblast_actorflaring","locator":"target"},
+        {"type":"entity_particles","effect":"cobblemon:focusblast_actorblob","locator":"target"},
+        {"type":"pause","pause":0.95},
+        {"type":"entity_particles","effect":"cobblemon:focusblast_actorlaunch","locator":"target"},
+        {"type":"pause","pause":0.02},
+        {"type":"entity_particles","effect":"cobblemon:focusblast_targetflaring","locator":"target"},
+        {"type":"entity_particles","effect":"cobblemon:focusblast_targetblob","locator":"target"},
+        {"type":"entity_particles","effect":"cobblemon:focusblast_targetsplotching","locator":"target"},
+        {"type":"pause","pause":0.34},
+        {"type":"entity_particles","entityCondition":"q.entity.is_user == false && q.missed(q.entity.uuid) == false","effect":"cobblemon:focusblast_targetimpact","locator":"target"},
+        {"type":"entity_molang","entityCondition":"q.entity.is_user == false && q.missed(q.entity.uuid) == false","expressions":["q.sound('move.focusblast.target');"]},
+        {"type":"remove_holds","holds":["effects"]},
+        {"type":"pause","pause":1.7}
+    ]
+}

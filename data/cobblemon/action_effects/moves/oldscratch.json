@@ -1,0 +1,33 @@
+﻿{
+    "timeline":  [
+                     "save_position",
+                     "move_to_target",
+                     "pause",
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "scratch",
+                                           "physical"
+                                       ],
+                         "variables":  [
+                                           "v.animation=\u0027cobblemon:scratch\u0027"
+                                       ],
+                         "delay":  "q.do_effect_walks ? 3 : 1"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.oldscratch.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "damage"
+                                   ]
+                     },
+                     "return_to_position",
+                     "pause"
+                 ]
+}

@@ -1,0 +1,59 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "hypnosis",
+                                           "psychic",
+                                           "status"
+                                       ],
+                         "delay":  1.15
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:hypnosis_actor",
+                         "locator":  "target",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.hypnosis.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:hypnosis_targetimpact",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:hypnosis_target",
+                         "delay":  0.05,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.7
+                     }
+                 ]
+}

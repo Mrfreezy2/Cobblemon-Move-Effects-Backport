@@ -1,0 +1,19 @@
+﻿{
+    "timeline": [
+        {"type":"add_holds","holds":["effects"]},
+        {"type":"animation","animation":["chargebeam","beam","special"],"delay":0.8},
+        {"type":"entity_particles","effect":"cobblemon:chargebeam_charge","locator":"special_attack","entityCondition":"q.entity.is_user == true"},
+        {"type":"pause","pause":0.25},
+        {"type":"entity_molang","entityCondition":"q.entity.is_user == true","expressions":["q.sound('move.chargebeam.actor');"]},
+        {"type":"entity_particles","effect":"cobblemon:chargebeam_actor","locator":"special_attack","entityCondition":"q.entity.is_user == true"},
+        {"type":"entity_particles","effect":"cobblemon:chargebeam_actoremit","locator":"special_attack","entityCondition":"q.entity.is_user == true"},
+        {"type":"entity_particles","effect":"cobblemon:chargebeam_actorspray","locator":"special_attack","entityCondition":"q.entity.is_user == true"},
+        {"type":"pause","pause":0.1},
+        {"type":"entity_particles","entityCondition":"q.entity.is_user == false && q.missed(q.entity.uuid) == false","effect":"cobblemon:chargebeam_target","locator":"target"},
+        {"type":"entity_molang","entityCondition":"q.entity.is_user == false && q.missed(q.entity.uuid) == false","expressions":["q.sound('move.chargebeam.target');"]},
+        {"type":"pause","pause":0.5},
+        {"type":"entity_particles","entityCondition":"q.entity.is_user == false && q.missed(q.entity.uuid) == false","effect":"cobblemon:chargebeam_targetburst","locator":"target"},
+        {"type":"remove_holds","holds":["effects"]},
+        {"type":"pause","pause":1.7}
+    ]
+}

@@ -1,0 +1,60 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "bubblebeam",
+                                           "water",
+                                           "spray",
+                                           "special"
+                                       ],
+                         "delay":  1.25
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:bubblebeam_actor",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:bubblebeam_bubbles",
+                         "locator":  "special_attack",
+                         "entityCondition":  "q.entity.is_user == true"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.bubblebeam.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.575
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.bubblebeam.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.9
+                     }
+                 ]
+}

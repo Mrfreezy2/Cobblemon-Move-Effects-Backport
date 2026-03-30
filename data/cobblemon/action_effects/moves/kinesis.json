@@ -1,0 +1,50 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "kinesis",
+                                           "status"
+                                       ],
+                         "delay":  0.1
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:kinesis_actor",
+                         "locator":  "middle",
+                         "delay":  0.1
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.kinesis.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:kinesis_actorspiral",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  2
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.9
+                     }
+                 ]
+}

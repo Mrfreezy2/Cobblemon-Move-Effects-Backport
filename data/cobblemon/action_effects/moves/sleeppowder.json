@@ -1,0 +1,66 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "sleeppowder",
+                                           "powder",
+                                           "status",
+                                           "cry"
+                                       ],
+                         "delay":  1.25
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:sleeppowder",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.sleeppowder.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:sleeppowder_cloud",
+                         "delay":  0.1,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.55
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:sleeppowder_land",
+                         "delay":  1,
+                         "locator":  "root"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.sleeppowder.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.95
+                     }
+                 ]
+}

@@ -1,0 +1,99 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "thunderwave",
+                                           "electric",
+                                           "status"
+                                       ],
+                         "delay":  1.15
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:thunderwave_launch",
+                         "delay":  0.05,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.thunderwave.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:thunderwave_actor",
+                         "delay":  0.05,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.65
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:thunderwave_impact1",
+                         "delay":  0.05,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "expressions":  [
+                                             "q.sound(\u0027move.thunderwave.target\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:thunderwave_impact2",
+                         "delay":  0.05,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:thunderwave_sparking",
+                         "delay":  0.05,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.1
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "entityCondition":  "q.entity.is_user == false \u0026\u0026 q.missed(q.entity.uuid) == false",
+                         "effect":  "cobblemon:thunderwave_impact3",
+                         "delay":  0.05,
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.65
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.25
+                     }
+                 ]
+}

@@ -1,0 +1,10 @@
+﻿{
+    "timeline": [
+        {"type":"add_holds","holds":["effects"]},
+        {"type":"animation","animation":["solarbeam","special"],"delay":0.0},
+        {"type":"entity_particles","effect":"cobblemon:solarbeam_charge","locator":"middle","entityCondition":"q.entity.is_user == true"},
+        {"type":"pause","pause":3.5},
+        {"type":"remove_holds","holds":["effects"]},
+        {"type":"pause","pause":0.5}
+    ]
+}

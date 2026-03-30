@@ -1,0 +1,14 @@
+﻿{
+    "timeline": [
+        { "type": "add_holds", "holds": ["effects"] },
+        { "type": "animation", "animation": ["toxic", "nastyplot", "special"], "delay": 0.2 },
+        { "type": "entity_particles", "entityCondition": "q.entity.is_user == true", "effect": "cobblemon:toxic_bubbles", "locator": "middle" },
+        { "type": "pause", "pause": 0.5 },
+        { "type": "entity_molang", "entityCondition": "q.entity.is_user == true", "expressions": ["q.sound('move.toxic.actor');"] },
+        { "type": "pause", "pause": 0.3 },
+        { "type": "entity_particles", "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false", "effect": "cobblemon:toxic_targetbubbles", "locator": "target" },
+        { "type": "entity_molang", "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false", "expressions": ["q.sound('move.toxic.target');"] },
+        { "type": "remove_holds", "holds": ["effects"] },
+        { "type": "pause", "pause": 1.2 }
+    ]
+}

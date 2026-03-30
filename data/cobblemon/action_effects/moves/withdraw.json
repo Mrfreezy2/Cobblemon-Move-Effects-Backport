@@ -1,0 +1,54 @@
+﻿{
+    "timeline":  [
+                     {
+                         "type":  "add_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "animation",
+                         "animation":  [
+                                           "withdraw",
+                                           "protect",
+                                           "status"
+                                       ],
+                         "delay":  0.5
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:withdraw_actor1",
+                         "locator":  "target"
+                     },
+                     {
+                         "type":  "entity_molang",
+                         "entityCondition":  "q.entity.is_user == true",
+                         "expressions":  [
+                                             "q.sound(\u0027move.withdraw.actor\u0027);"
+                                         ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.5
+                     },
+                     {
+                         "type":  "entity_particles",
+                         "effect":  "cobblemon:withdraw_actorbubbles",
+                         "locator":  "middle"
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  0.9
+                     },
+                     {
+                         "type":  "remove_holds",
+                         "holds":  [
+                                       "effects"
+                                   ]
+                     },
+                     {
+                         "type":  "pause",
+                         "pause":  1.9
+                     }
+                 ]
+}
