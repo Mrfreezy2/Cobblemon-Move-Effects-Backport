@@ -1,6 +1,12 @@
 # Cobblemon-Move-Effects-Backport
 Ever dreamed of move animations in 1.20.1 ? Well here it is !
 
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?logo=modrinth)](https://modrinth.com/datapack/cobblemon-move-effects-backport-forgefabric)
+
+[![CurseForge](https://img.shields.io/badge/CurseForge-Download-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/data-packs/cobblemon-move-effects-backport)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github)](https://github.com/Mrfreezy2/Cobblemon-Move-Effects-Backport)
+
 A backport of the official Cobblemon move animations for 1.20.1. This resource/data pack aims to bring the latest combat visuals to older, overlooked versions.
 I also reused, recolored, and redone a lot of moves not yet done, even in Cobblemon 1.7 !
 New custom sounds, new moves, and more fun !
