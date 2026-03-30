@@ -11,7 +11,7 @@ New custom sounds, new moves, and more fun !
 The code in this repository is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**. You can find a copy of the license in the `LICENSE` file.
 
 **Assets :**
-Most of animations and textures included in this backport are the property of the **Cobblemon Team** or free of use assets. These Cobblemon assets are used under Cobblemon's Fair Use Policy for non-commercial Minecraft projects.
+Most of the assets included in this backport are the property of the **Cobblemon Team** or free of use assets, only some of them are custom. The .jsons had to be heavily modified to work on 1.5, so I don't know what belongs to who but hey I just want people to enjoy move anims in 1.20.1 ! These Cobblemon assets are used under Cobblemon's Fair Use Policy for non-commercial Minecraft projects.
 Original Project: [Cobblemon Official](https://cobblemon.com/)
 Source: [Cobblemon GitLab](https://gitlab.com/cable-mc/cobblemon)
 
