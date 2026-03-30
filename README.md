@@ -7,7 +7,7 @@ New custom sounds, new moves, and more fun !
 
 **License & Credits :**
 
-**Code**
+**Code :**
 The code in this repository is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**. You can find a copy of the license in the `LICENSE` file.
 A lot of 
 
