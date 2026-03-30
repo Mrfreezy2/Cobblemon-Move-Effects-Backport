@@ -19,7 +19,7 @@ Source: [Cobblemon GitLab](https://gitlab.com/cobblemon/cobblemon)
 
 **Installation :**
 
-1. Ensure you have the base **Cobblemon** mod installed for [Target Version].
+1. Ensure you have the base **Cobblemon** mod installed for 1.20.1 (latest is 1.5.2).
 2. Download the latest release of this backport.
 3. Drop the pack in "resourcepacks" and "datapack" folder (Usually at world creation for Datapack).
 
