@@ -1,7 +1,7 @@
 # Cobblemon-Move-Effects-Backport
 Ever dreamed of move animations in 1.20.1 ? Well here it is !
 
-[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?logo=modrinth)](https://modrinth.com/datapack/cobblemon-move-effects-backport-forgefabric)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?logo=modrinth)](https://modrinth.com/datapack/cobblemon-move-effects-backport)
 
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-F16436?logo=curseforge)](https://www.curseforge.com/minecraft/data-packs/cobblemon-move-effects-backport)
 
